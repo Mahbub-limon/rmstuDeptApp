@@ -2,12 +2,10 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using rmstu.Models;
 using rmstu.viewModel;
-
 namespace rmstu.Controllers
 {
     public class HomeController : Controller
     {
-
         new List<Department> department = new List<Department>()
         { 
             new Department{Id =1,Name ="CSE"},
@@ -16,21 +14,13 @@ namespace rmstu.Controllers
             new Department{Id=4 ,Name= "FES"},
             new Department{Id=5 ,Name="FMRT"}
         };
-
-
         public IActionResult Index()
         {
              viewModelClass vm = new viewModelClass()
             { 
-                Departments = department
-            
+                Departments = department  
             };
-
             return View(vm);
-        }
-
-       
-
-        
+        }        
     }
 }
