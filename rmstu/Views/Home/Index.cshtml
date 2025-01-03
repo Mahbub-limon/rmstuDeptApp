@@ -1,0 +1,19 @@
+﻿@using rmstu.viewModel
+@model viewModelClass
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>RMSTU DEPARTMEMT</h2>
+
+<ul>
+    @foreach(var dept in Model.Departments )
+    {
+        <li>@dept.Name</li>
+
+    }
+
+
+</ul>
+
